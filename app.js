@@ -14,5 +14,5 @@ btnTranslate.addEventListener("click", function eventHandler(){
         .then(translate => {
             outputDiv.innerText = translate.contents.translated;
         })
-        .catch(error => console.log("Error occured. "+error))
+        .catch(error => alert("Error occured. "+error))
 })
