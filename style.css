@@ -5,6 +5,8 @@ body{
     margin: 0;
     color: gold;
     background-image: url(/image/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
@@ -16,7 +18,7 @@ body{
 h1{
     font-size: 3rem;
     padding: 2rem;
-    background-color: #371607;
+    background-color: #371607da;
     margin-top: 0;
 }
 
@@ -43,6 +45,65 @@ textarea{
 }
 
 button{
-    
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #af3b05;
+    color: white;
 }
 
+#output{
+    font-size: 1.5rem;
+    padding: 3rem;
+    background-color: #371607b7;
+    min-height: 3rem;
+    margin: 2rem auto;
+    width: 40%;
+    border: 3px solid black;
+    position: relative;
+}
+
+#output::before{
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+    font-size: 4rem;
+}
+
+#output::after{
+    content: '"';
+    position: absolute;
+    bottom: -3rem;
+    right: -0.5rem;
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h3{
+        padding: 0.5rem;
+    }
+    
+    span{
+        right: 2rem;
+        top: 4rem;
+    }
+
+    textarea{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    h1{
+        font-size: 2rem;
+    }
+
+    #output{
+        font-size: 1.2rem;
+    }
+}
